@@ -1,7 +1,7 @@
 Name:           krun-awsnitro-eif-ctl
 Version:        0.1.0
 Release:        %autorelease
-Summary:        krun-awsnitro EIF configuration tool
+Summary:        EIF configuration tool for krun-awsnitro
 
 # Apache-2.0
 # Apache-2.0 OR MIT
@@ -10,8 +10,8 @@ Summary:        krun-awsnitro EIF configuration tool
 # Unlicense OR MIT
 License:        %{shrink:
     Apache-2.0 AND
-    (Apache-2.0 OR MIT) AND
     MIT AND
+    (Apache-2.0 OR MIT) AND
     (Unlicense OR MIT)
     }
 URL:            https://github.com/virtee/krun-awsnitro-eif-ctl
@@ -20,9 +20,11 @@ Source:         %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
 BuildRequires:  cargo-rpm-macros >= 24
 
 %global _description %{expand:
-krun-awsnitro EIF configuration tool.}
+EIF configuration tool for krun-awsnitro.}
 
-%description %{_description}
+%description
+Tool to configure cached EIF files for the krun-awsnitro runtime for AWS
+Nitro Enclaves.
 
 %prep
 %autosetup -p1
