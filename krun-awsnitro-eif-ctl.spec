@@ -19,12 +19,9 @@ Source:         %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires:  cargo-rpm-macros >= 24
 
-%global _description %{expand:
-EIF configuration tool for krun-awsnitro.}
-
 %description
 Tool to configure cached EIF files for the krun-awsnitro runtime for AWS
-Nitro Enclaves.
+Nitro Enclaves
 
 %prep
 %autosetup -p1
